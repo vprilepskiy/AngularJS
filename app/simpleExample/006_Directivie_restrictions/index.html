@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.js"></script>
+    <script src="app.js"></script>
+
+</head>
+<body ng-app="myApp">
+    <h4>Название директивы в html пишется через -, а в js пишется с заглавной буквы</h4>
+
+    <!--'A' - only matches attribute name-->
+    <div my-directive>My text.</div>
+
+    <!--'E' - only matches element name-->
+    <my-directive>My text.</my-directive>
+
+    <!--'C' - only matches class name-->
+    <div class="my-directive">My text.</div>
+
+    <!--'M' - only matches comment-->
+    <!-- directive: my-directive -->
+
+</body>
+</html>

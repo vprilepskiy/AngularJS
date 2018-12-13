@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.js"></script>
+    <script src="app.js"></script>
+
+</head>
+<body ng-app="myApp">
+
+<div ng-controller="myCtrl">
+
+    <h3>Controller myValue: {{myValue}}</h3>
+
+    <h4>scope: false, Общий экземпляр scope</h4>
+    <my-directive-f>faill</my-directive-f>
+
+    <h4>scope: true, Тут создается свой экземпляр scope</h4>
+    <my-directive-t>faill</my-directive-t>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular-route.js"></script>
+    
+    <script src="app.js"></script>
+
+</head>
+<body ng-app="myApp">
+
+<div ng-include="'tmpl/head.tmpl.html'"></div>
+
+<a href="#!/">Home page</a>
+<a href="#!/tmpl1">First template</a>
+<a href="#!/tmpl2/1">Second template</a>
+<a href="#!/aaaa">404</a>
+<a href="#!/toHome">toHome</a>
+
+
+<ng-view></ng-view>
+
+</body>
+</html>

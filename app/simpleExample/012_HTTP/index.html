@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular-route.js"></script>
+    <script src="app.js"></script>
+
+</head>
+<body ng-app="myApp">
+
+<div ng-controller="myCtrl">
+
+    <h4>response: {{response}}</h4>
+
+    <h4>response: {{content}}</h4>
+    <h4>response: {{statuscode}}</h4>
+    <h4>response: {{statustext}}</h4>
+
+    <h4>response: {{err}}</h4>
+
+
+    <h4>response1: {{response1}}</h4>
+
+    <h4>response1: {{content1}}</h4>
+    <h4>response1: {{statuscode1}}</h4>
+    <h4>response1: {{statustext1}}</h4>
+
+    <h4>response1: {{err1}}</h4>
+
+    <button ng-click="post()"></button>
+
+</div>
+
+</body>
+</html>

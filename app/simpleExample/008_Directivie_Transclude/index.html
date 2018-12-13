@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.js"></script>
+    <script src="app.js"></script>
+
+</head>
+<body ng-app="myApp">
+    <h4>Пример директивы. Теперь отображается текст html и текст из template</h4>
+
+    <div>
+        <my-directive>My text</my-directive>
+    </div>
+
+
+    <div ng-controller="myCtrl">
+        <my-directive-pro>My text {{name}}</my-directive-pro>
+    </div>
+
+</body>
+</html>

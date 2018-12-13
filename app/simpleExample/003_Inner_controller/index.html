@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.js"></script>
+    <script src="app.js"></script>
+
+</head>
+<body ng-app="myApp">
+    <h4>Вложенные контроллеры.</h4>
+    <div ng-controller="mainCtrl">
+        <button ng-click="myFunc()">mainCtrl</button>
+
+        <div ng-controller="innerCtrl1">
+            <button ng-click="myFunc()">innerCtrl1</button>
+        </div>
+
+        <div ng-controller="innerCtrl2">
+            <button ng-click="myFunc()">innerCtrl2</button>
+        </div>
+    </div>
+</body>
+</html>

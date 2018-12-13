@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.js"></script>
+    <script src="app.js"></script>
+
+</head>
+<h4>Обмен данными между контроллерами при помощи фабрики</h4>
+<body ng-app="myApp">
+    <label>Контроллер 1</label>
+    <div ng-controller="myCtrl_1">
+        <input type="text" ng-model="myValue">
+        <input type="text" value="{{myValue}}" disabled>
+        <input type="text" ng-model="fact.myVal">
+    </div>
+
+    <label>Контроллер 2</label>
+    <div ng-controller="myCtrl_2">
+        <input type="text" ng-model="myValue">
+        <input type="text" value="{{myValue}}" disabled>
+        <input type="text" ng-model="fact.myVal">
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.js"></script>
+    <script src="app.js"></script>
+
+</head>
+<body ng-app="myApp">
+    <h4>Контроллер как синтаксис.</h4>
+    <div ng-controller="ctrl1 as firstCtrl">
+
+        <div ng-controller="ctrl2 as secondCtrl">
+            {{thirdCtrl.myValue}}
+            <div ng-controller="ctrl3 as thirdCtrl">
+                {{firstCtrl.myValue}}
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>

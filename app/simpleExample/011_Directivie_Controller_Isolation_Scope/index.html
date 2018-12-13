@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.js"></script>
+    <script src="app.js"></script>
+
+</head>
+<body ng-app="myApp">
+
+<div ng-controller="myCtrl">
+
+    <h4>Controller myValue1: {{myValue1}}</h4>
+    <h4>Controller myValue2: {{myValue2}}</h4>
+    <label>Controller myFunction:</label>
+    <button ng-click="myFunction()">Press</button>
+
+    <h1>Directive</h1>
+    <my-directive my-value1="{{myValue1}}" my-function={{myFunction}} my-value3='333'>faill</my-directive>
+
+</div>
+</body>
+</html>

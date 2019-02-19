@@ -1,30 +1,26 @@
 var myApp = angular.module('myApp', []);
 
-myApp.controller('myCtrl', function ($scope) {
-    $scope.myValue = 'oldValue';
-});
-
-myApp.directive('myDirective', function () {
-    return {
-        scope: false, // false default Общий экземпляр scope
-        restrict: 'E', // можно писать 'EA', тогда директива будет работать и через атрибут и через элемент
-        template: '<input type="text" ng-model="myValue">',
-        link: function (scope, element, attrs) {
-            scope.myValue = 'newValue'; // обновляем переменную в общем scope
-        }
-    }
-});
-
 myApp.component('myComponent', {
 
-    template: 'template: "Name: {{$ctrl.name}}, newName: {{$ctrl.newName}}',
+    template: '<input type="number" ng-model="$ctrl.name"><label>{{$ctrl.name}}</label><input type="number" ng-model="$ctrl.newName"><button ng-click="$ctrl.increment()"></button>',
     bindings: {
-        name: '@'
+        name: '=',
+        newName: '<'
     },
     controller: function() {
+        this.$onChanges = function () {
+            console.log(this.newName);
+            console.log(this.name);
+        },
         this.$onInit = function() { //требуется с версии 1.6
-            this.newName = "Mac" + this.name;
+            this.newName = 10 + this.name;
+            this.increment = function () {
+                this.name++;
+            }
         }
+    },
+    require: {
+        // используется для связывания м/у компонентами
     }
 
 });

@@ -10,11 +10,21 @@
 </head>
 <body ng-app="myApp">
 
-    <h4>Directive</h4>
-    <my-directive>faill</my-directive>
-
     <h4>Component</h4>
-    <my-component name="Uasya">faill</my-component>
+    <my-component name="15">faill</my-component>
+
+<h4>Binding - это привязка. Бывает one-way и two-way. Первый передает данные в одну сторону, второй в обе. One-way передает данные на вью и если они изменяются в источнике, то изменятся и во вьюхе. Two-way отслеживает изменения с обоих сторон.</h4>
+<h4>это просто аналог scope который в директивах</h4>
+
+<table>
+    <tbody>
+    <tr><td>One-way передает данные на вью и если они изменяются в источнике, то изменятся и во вьюхе.</td></tr>
+    <tr><td>Two-way отслеживает изменения с обоих сторон.</td><td></td></tr>
+    <td>one-way : '<'</td>
+    <td>interpolation : '@'</td>
+    <td>и callback в родителя : '&'</td>
+    </tbody>
+</table>
 
 </body>
 </html>
